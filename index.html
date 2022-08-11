@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task APP</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oswald"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section id="header">
+            <div>
+                <p id="title">Task Application</p>
+            </div>
+    
+            <div id="control">
+                <input placeholder="Enter the task" type="text" name="task" id="task">
+                <button class="primary" onclick="tasks.addTask()">Add Task</button>
+            </div>
+    </section>
+    <section class="tasksContainer">
+        <ul id="taskList"></ul>
+
+    </section>
+    
+    <div class="content">
+        <img id="jesus" src="https://c.tenor.com/DWG7xjxuFmIAAAAC/the-simpsons-dancing-jesus.gif">
+        <img id="cats" src="https://thumbs.dreamstime.com/z/2-pretty-ragdoll-kittens-hugging-10590274.jpg">
+    </div>
+    
+    <script src="./tasks.js"></script>
+</body>
+</html>
