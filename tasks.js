@@ -21,40 +21,40 @@ class Tasks {
         return
     }
     
-    tasksArray.push({
-        id: tasksArray.length,
+    this.#taskList.push({
+        id:  this.#taskList.length,
         activity: task,
         done: false
     });
     taskInput.value = '';
 
-   showTasks();
+   this.showTasks()
   }
 
   editTask(status, id) {
     if (!status) {
-      const index = tasksArray.findIndex((value) => {
+      const index =  this.#taskList.findIndex((value) => {
         return value.id === id;
       });
-      tasksArray[index].done = true;
-      showTasks();
+      this.#taskList[index].done = true;
+      this.showTasks()
     }
   }
 
   deleteTask(id){
 
-    tasksArray = tasksArray.filter(t => t.id != id )
+     this.#taskList =  this.#taskList.filter(t => t.id != id )
 
-    showTasks();
+    this.showTasks()
 
   }
 
   showTasks(){
     taskList.innerHTML = ""; // Limpiar el contenido del elemento
 
-  if (tasksArray.length) {
+  if ( this.#taskList.length) {
     taskList.setAttribute("class", "tasksList"); // Agregar clase al elemento
-    tasksArray
+     this.#taskList
       .sort((a, b) => a.done - b.done) // Ordenar las tareas por estado (hecha o no hecha)
       .forEach((value) => {
         // Recorrer el array de tareas
