@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task APP</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks APP</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Oswald"
@@ -17,29 +17,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <section id="header">
-            <div>
-                <p id="title">Task Application</p>
-            </div>
-    
-            <div id="control">
-                <input placeholder="Enter the task" type="text" name="task" id="task">
-                <button id="addTask" class="primary">Add Task</button>
-            </div>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Lista de Tareas</h1>
+      <label for="task">
+        <input class="inputText" id="task" placeholder="¿Qué quieres hacer?" />
+      </label>
+      <button id="addTask" type="button" class="primary">
+        <i class="fa fa-plus-circle"></i> Agregar tarea
+      </button>
     </section>
     <section class="tasksContainer">
-        <ul id="taskList"></ul>
-
+      <ul id="tasksList"></ul>
     </section>
-    
-    <div class="content">
+    <section>
+      <div class="content">
         <img id="jesus" src="https://c.tenor.com/DWG7xjxuFmIAAAAC/the-simpsons-dancing-jesus.gif">
         <img id="cats" src="https://thumbs.dreamstime.com/z/2-pretty-ragdoll-kittens-hugging-10590274.jpg">
-    </div>
-    
-    <script type="module" src="./tasks.view.js"></script>
-</body>
+      </div>
+    </section>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <!-- <script async src="./Tasks.js"></script>-->
+    <script type="module" async src="./tasks.view.js"></script>
+  </body>
 </html>
